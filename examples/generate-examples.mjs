@@ -84,10 +84,20 @@ const htmlCode = `
         }
       }
     </style>
+    <style type="text/css" id="toggle-gap">
+      [data-test-id="virtuoso-item-list"] {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <script src="./__examples.jsx"></script>
+    <div>
+      <label><input type="checkbox" onchange="document.getElementById('toggle-gap').media = this.checked ? 'all' : 'max-width: 1px' ">Toggle gap</label>
+  </div>
   </body>
 </html>
 `
